@@ -54,3 +54,6 @@ Deep Learning (DL) is an advanced form of machine learning that uses neural netw
 ## Conclusion
 
 AI, ML, and DL are transforming industries by enabling machines to learn, predict, and make intelligent decisions. These technologies are widely used in healthcare, business, transportation, and entertainment.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae3430ac-9244-42e8-bccd-b8357fc10585" />
+
