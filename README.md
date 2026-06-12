@@ -57,3 +57,80 @@ AI, ML, and DL are transforming industries by enabling machines to learn, predic
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae3430ac-9244-42e8-bccd-b8357fc10585" />
 
+##Task 2:python basic practice
+Python Basics Practice Repository
+Overview
+
+This repository contains 15 beginner-friendly Python programs designed to build a strong foundation in Python programming. The programs cover important programming concepts such as variables, data types, conditional statements, loops, functions, lists, and dictionaries.
+
+These exercises help beginners understand basic Python syntax and logic building.
+
+Topics Covered
+Variables and Data Types
+User Input
+Conditional Statements
+For Loops
+While Loops
+Functions with Parameters
+List Manipulation
+Dictionary Manipulation
+Programs Included
+1. Variable Example
+
+Demonstrates how to create variables and store values.
+
+2. User Input Program
+
+Takes input from the user and displays it.
+
+3. Data Types Program
+
+Shows different Python data types such as int, float, string, and boolean.
+
+4. Even or Odd Program
+
+Checks whether a number is even or odd using conditions.
+
+5. Positive or Negative Number
+
+Determines whether a number is positive, negative, or zero.
+
+6. For Loop Example
+
+Prints numbers using a for loop.
+
+7. Multiplication Table Program
+
+Generates the multiplication table of a given number.
+
+8. While Loop Example
+
+Demonstrates the use of a while loop.
+
+9. Sum of Numbers Program
+
+Calculates the sum of the first 10 natural numbers.
+
+10. Simple Function Program
+
+Shows how to define and call a function.
+
+11. Addition Function Program
+
+Adds two numbers using functions with parameters.
+
+12. List Operations Program
+
+Performs basic list operations like append and remove.
+
+13. List Loop Program
+
+Prints all elements of a list using loops.
+
+14. Dictionary Example
+
+Demonstrates dictionary creation and value access.
+
+15. Dictionary Loop Program
+
+Loops through dictionary key-value pairs.
