@@ -57,9 +57,9 @@ AI, ML, and DL are transforming industries by enabling machines to learn, predic
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae3430ac-9244-42e8-bccd-b8357fc10585" />
 
-##Task 2:python basic practice
+## Task 2:python basic practice
 Python Basics Practice Repository
-Overview
+## Overview
 
 This repository contains 15 beginner-friendly Python programs designed to build a strong foundation in Python programming. The programs cover important programming concepts such as variables, data types, conditional statements, loops, functions, lists, and dictionaries.
 
