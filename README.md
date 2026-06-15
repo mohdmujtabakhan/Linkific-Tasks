@@ -134,3 +134,172 @@ Demonstrates dictionary creation and value access.
 15. Dictionary Loop Program
 
 Loops through dictionary key-value pairs.
+
+## Task 3: Git commands cheat sheet
+# Git Commands Cheat Sheet
+
+## What is Git?
+Git is a version control system used to track code changes, manage projects, and collaborate with developers.
+
+---
+
+# Basic Git Workflow
+
+```text
+Create Project → git init → git add → git commit → git push
+```
+
+---
+
+# Important Git Commands
+
+| Command | Purpose |
+|---|---|
+| `git init` | Create a local Git repository |
+| `git clone URL` | Copy repository from GitHub |
+| `git status` | Check current repository status |
+| `git add filename` | Add specific file |
+| `git add .` | Add all files |
+| `git commit -m "message"` | Save changes locally |
+| `git push` | Upload code to GitHub |
+| `git pull` | Download latest changes |
+| `git remote -v` | Check connected remote repository |
+| `git branch` | View branches |
+| `git checkout branch-name` | Switch branch |
+| `git checkout -b branch-name` | Create and switch branch |
+| `git merge branch-name` | Merge branches |
+| `git log` | View commit history |
+| `git rm filename` | Delete tracked file |
+| `git mv old new` | Rename file |
+| `git reset --hard` | Remove uncommitted changes |
+
+---
+
+# Step-by-Step Example
+
+## 1. Initialize Repository
+
+```bash
+git init
+```
+
+Creates a new local Git repository.
+
+---
+
+## 2. Check Status
+
+```bash
+git status
+```
+
+Shows modified, added, or untracked files.
+
+---
+
+## 3. Add Files
+
+### Add Single File
+
+```bash
+git add app.py
+```
+
+### Add All Files
+
+```bash
+git add .
+```
+
+Moves files to staging area.
+
+---
+
+## 4. Commit Changes
+
+```bash
+git commit -m "Added calculator program"
+```
+
+Saves project snapshot locally.
+
+---
+
+## 5. Connect to GitHub Repository
+
+```bash
+git remote add origin https://github.com/username/repository-name.git
+```
+
+Connects local repository to GitHub.
+
+---
+
+## 6. Push Code to GitHub
+
+```bash
+git push -u origin main
+```
+
+Uploads code to remote repository.
+
+---
+
+## 7. Clone Existing Repository
+
+```bash
+git clone https://github.com/username/repository-name.git
+```
+
+Copies GitHub repository to local system.
+
+---
+
+## 8. Pull Latest Changes
+
+```bash
+git pull
+```
+
+Downloads latest updates from GitHub.
+
+---
+
+# Branch Commands
+
+## Create New Branch
+
+```bash
+git branch feature-branch
+```
+
+---
+
+## Switch Branch
+
+```bash
+git checkout feature-branch
+```
+
+---
+
+## Create + Switch Branch
+
+```bash
+git checkout -b feature-branch
+```
+
+---
+
+## Merge Branch
+
+```bash
+git merge feature-branch
+```
+
+Combines branch changes into current branch.
+
+---
+
+
+
