@@ -1,0 +1,357 @@
+# Flask REST API Basics
+
+## Project Overview
+
+This project demonstrates the fundamentals of building a RESTful API using Flask in Python. The application performs basic CRUD (Create, Read, Update, Delete) operations on a list of items using different HTTP methods. The API is tested using Postman, which allows sending requests and viewing JSON responses.
+
+---
+
+# Objectives
+
+* Learn Flask web framework fundamentals.
+* Understand REST API architecture.
+* Implement CRUD operations using HTTP methods.
+* Handle JSON requests and responses.
+* Test API endpoints using Postman.
+* Understand the role of Flask-CORS in API development.
+
+---
+
+# Technologies Used
+
+## 1. Python
+
+Python is the programming language used to build the application. It provides a simple syntax and extensive libraries for backend development.
+
+Role:
+
+* Develop backend logic.
+* Process requests and responses.
+* Handle data manipulation.
+
+---
+
+## 2. Flask
+
+Flask is a lightweight Python web framework used to create web applications and REST APIs.
+
+Role:
+
+* Creates the web server.
+* Defines API routes (endpoints).
+* Handles HTTP requests and responses.
+* Returns JSON data to clients.
+
+Example:
+
+```python
+@app.route("/items", methods=["GET"])
+```
+
+---
+
+## 3. Flask-CORS
+
+Flask-CORS is an extension that enables Cross-Origin Resource Sharing (CORS).
+
+Role:
+
+* Allows frontend applications running on different domains or ports to communicate with the Flask API.
+* Prevents browser CORS restrictions during web application development.
+* Makes the API accessible from external frontend applications.
+
+Example:
+
+```python
+from flask_cors import CORS
+
+CORS(app)
+```
+
+---
+
+## 4. REST API
+
+REST (Representational State Transfer) is an architectural style used for communication between clients and servers using HTTP methods.
+
+HTTP Methods implemented in this project:
+
+* GET – Retrieve data
+* POST – Create new data
+* PUT – Update existing data
+* DELETE – Remove data
+
+---
+
+## 5. Postman
+
+Postman is an API testing tool used to send HTTP requests and inspect server responses.
+
+Role:
+
+* Test all API endpoints.
+* Send JSON request bodies.
+* Verify status codes.
+* Validate API functionality without creating a frontend application.
+
+---
+
+# API Documentation
+
+## Base URL
+
+http://127.0.0.1:5000
+
+---
+
+## 1. Home Endpoint
+
+Method:
+
+GET
+
+Endpoint:
+
+/
+
+Description:
+
+Returns a welcome message.
+
+Response:
+
+```
+Hello, Flask!
+```
+
+---
+
+## 2. Get All Items
+
+Method:
+
+GET
+
+Endpoint:
+
+/items
+
+Description:
+
+Returns all available items.
+
+Example Response:
+
+```json
+[
+    {
+        "id": 1,
+        "name": "Laptop"
+    },
+    {
+        "id": 2,
+        "name": "Mouse"
+    },
+    {
+        "id": 3,
+        "name": "Keyboard"
+    }
+]
+```
+
+---
+
+## 3. Get Item by ID
+
+Method:
+
+GET
+
+Endpoint:
+
+/items/<id>
+
+Example:
+
+/items/2
+
+Description:
+
+Returns a specific item using its ID.
+
+Example Response:
+
+```json
+{
+    "id": 2,
+    "name": "Mouse"
+}
+```
+
+---
+
+## 4. Add New Item
+
+Method:
+
+POST
+
+Endpoint:
+
+/items
+
+Request Body:
+
+```json
+{
+    "id": 4,
+    "name": "Monitor"
+}
+```
+
+Example Response:
+
+```json
+{
+    "message": "Item added successfully",
+    "item": {
+        "id": 4,
+        "name": "Monitor"
+    }
+}
+```
+
+---
+
+## 5. Update Item
+
+Method:
+
+PUT
+
+Endpoint:
+
+/items/4
+
+Request Body:
+
+```json
+{
+    "name": "Gaming Monitor"
+}
+```
+
+Example Response:
+
+```json
+{
+    "message": "Item updated successfully",
+    "item": {
+        "id": 4,
+        "name": "Gaming Monitor"
+    }
+}
+```
+
+---
+
+## 6. Delete Item
+
+Method:
+
+DELETE
+
+Endpoint:
+
+/items/4
+
+Description:
+
+Deletes the specified item.
+
+Example Response:
+
+```json
+{
+    "message": "Item deleted successfully"
+}
+```
+
+---
+
+# Project Structure
+
+```
+FLASK/
+│── app.py
+│── requirements.txt
+│── README.md
+│── My Collection.postman_collection.json
+```
+
+---
+
+# Requirements
+
+Install the required packages:
+
+```bash
+pip install flask
+pip install flask-cors
+```
+
+or
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Running the Application
+
+Start the Flask server:
+
+```bash
+python app.py
+```
+
+The application will run at:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+# Testing the API
+
+The API was tested using Postman.
+
+Tested Endpoints:
+
+* GET /items
+* GET /items/<id>
+* POST /items
+* PUT /items/<id>
+* DELETE /items/<id>
+
+All endpoints return JSON responses with appropriate HTTP status codes.
+
+---
+
+# Learning Outcomes
+
+Through this project, I learned:
+
+* Flask web framework basics.
+* REST API development.
+* HTTP request methods.
+* API routing and endpoints.
+* JSON request and response handling.
+* CRUD operations.
+* Cross-Origin Resource Sharing (CORS).
+* API testing using Postman.
+
+---
+
