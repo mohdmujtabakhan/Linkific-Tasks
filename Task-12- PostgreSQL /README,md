@@ -1,0 +1,664 @@
+# Flask SQL CRUD API with PostgreSQL
+
+## Project Overview
+
+This project demonstrates how to build a RESTful CRUD API using **Flask** and **PostgreSQL**. The application performs database operations such as Create, Read, Update, and Delete (CRUD) on a Books database.
+
+The API is tested using **Postman**, while PostgreSQL stores all records permanently.
+
+---
+
+# Project Objectives
+
+The main objectives of this project are:
+
+- Learn SQL and PostgreSQL
+- Create relational database tables
+- Write SQL queries
+- Connect Flask with PostgreSQL
+- Build REST APIs
+- Test APIs using Postman
+- Generate Database Schema Diagram
+- Organize project for GitHub
+
+---
+
+# Technologies Used
+
+## 1. Python
+
+Python is the programming language used to develop the backend application.
+
+Role:
+- Writes backend logic
+- Connects Flask with PostgreSQL
+- Handles API requests
+- Processes database queries
+
+---
+
+## 2. Flask
+
+Flask is a lightweight Python web framework used for building web applications and REST APIs.
+
+Role:
+- Creates API routes
+- Receives HTTP requests
+- Sends JSON responses
+- Connects backend with database
+
+Example:
+
+```python
+@app.route("/books")
+def get_books():
+```
+
+This route executes whenever a client visits
+
+```
+http://127.0.0.1:5000/books
+```
+
+---
+
+## 3. PostgreSQL
+
+PostgreSQL is an open-source relational database management system.
+
+Role:
+
+- Stores book records
+- Stores author records
+- Performs SQL queries
+- Maintains relationships using Foreign Keys
+
+Database Used:
+
+```
+books_db
+```
+
+---
+
+## 4. pgAdmin
+
+pgAdmin is PostgreSQL's graphical interface.
+
+Role:
+
+- Create database
+- Create tables
+- Execute SQL queries
+- Insert data
+- Generate ER Diagram
+- View records
+
+---
+
+## 5. psycopg2
+
+psycopg2 is a PostgreSQL adapter for Python.
+
+Role:
+
+Allows Flask to communicate with PostgreSQL.
+
+Example:
+
+```python
+import psycopg2
+```
+
+---
+
+## 6. SQLAlchemy
+
+SQLAlchemy is Python's SQL toolkit and ORM.
+
+Although installed, this project primarily uses psycopg2.
+
+---
+
+## 7. Postman
+
+Postman is an API testing tool.
+
+Role:
+
+- Send GET request
+- Send POST request
+- Send PUT request
+- Send DELETE request
+- View JSON responses
+
+---
+
+# Project Workflow
+
+The project was completed in the following order.
+
+---
+
+## Step 1
+
+Installed PostgreSQL
+
+Installed:
+
+- PostgreSQL Server
+- pgAdmin
+- Command Line Tools
+
+---
+
+## Step 2
+
+Created Database
+
+Database Name
+
+```
+books_db
+```
+
+---
+
+## Step 3
+
+Created Books Table
+
+Columns:
+
+- id
+- title
+- author
+- price
+- category
+- author_id
+
+Primary Key
+
+```
+id
+```
+
+---
+
+## Step 4
+
+Created Authors Table
+
+Columns
+
+- author_id
+- author_name
+
+Primary Key
+
+```
+author_id
+```
+
+---
+
+## Step 5
+
+Added Foreign Key
+
+Connected
+
+```
+books.author_id
+```
+
+with
+
+```
+authors.author_id
+```
+
+This created a relationship between both tables.
+
+---
+
+## Step 6
+
+Inserted Sample Records
+
+Inserted multiple books and authors into PostgreSQL.
+
+---
+
+## Step 7
+
+Practiced SQL Queries
+
+Created queries.sql file.
+
+Covered more than 20 SQL queries.
+
+Topics included:
+
+- CREATE TABLE
+- INSERT
+- SELECT
+- UPDATE
+- DELETE
+- WHERE
+- ORDER BY
+- GROUP BY
+- COUNT
+- SUM
+- AVG
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- ALTER TABLE
+
+---
+
+## Step 8
+
+Installed Required Python Libraries
+
+Installed
+
+```bash
+pip install flask psycopg2-binary sqlalchemy flask-cors
+```
+
+---
+
+## Step 9
+
+Connected Flask with PostgreSQL
+
+Used psycopg2 connection.
+
+Example
+
+```python
+conn = psycopg2.connect(
+    host="localhost",
+    database="books_db",
+    user="postgres",
+    password="your_password"
+)
+```
+
+Successfully connected Flask with PostgreSQL.
+
+---
+
+## Step 10
+
+Built REST APIs
+
+Created CRUD endpoints.
+
+---
+
+# API Endpoints
+
+## GET
+
+Retrieve all books
+
+```
+GET /books
+```
+
+Purpose:
+
+Returns all book records.
+
+Example Response
+
+```json
+[
+    {
+        "id":1,
+        "title":"Python Programming",
+        "author":"John Smith",
+        "price":550
+    }
+]
+```
+
+---
+
+## POST
+
+Add new book
+
+```
+POST /books
+```
+
+Example Body
+
+```json
+{
+    "title":"Learning SQL",
+    "author":"Alan Beaulieu",
+    "price":799.99,
+    "category":"Database",
+    "author_id":3
+}
+```
+
+Purpose
+
+Creates a new book record.
+
+---
+
+## PUT
+
+Update existing book
+
+```
+PUT /books/4
+```
+
+Example
+
+```json
+{
+    "title":"Advanced SQL",
+    "price":999
+}
+```
+
+Purpose
+
+Updates an existing book.
+
+---
+
+## DELETE
+
+Delete book
+
+```
+DELETE /books/4
+```
+
+Purpose
+
+Removes book from database.
+
+---
+
+# HTTP Methods Used
+
+## GET
+
+Retrieve data
+
+---
+
+## POST
+
+Insert data
+
+---
+
+## PUT
+
+Update data
+
+---
+
+## DELETE
+
+Delete data
+
+---
+
+# SQL Concepts Practiced
+
+## CREATE TABLE
+
+Creates new tables.
+
+---
+
+## INSERT
+
+Adds records.
+
+---
+
+## SELECT
+
+Retrieves records.
+
+---
+
+## UPDATE
+
+Modifies existing records.
+
+---
+
+## DELETE
+
+Removes records.
+
+---
+
+## WHERE
+
+Filters records.
+
+---
+
+## ORDER BY
+
+Sorts records.
+
+---
+
+## GROUP BY
+
+Groups records.
+
+---
+
+## Aggregate Functions
+
+COUNT()
+
+Counts rows.
+
+SUM()
+
+Adds values.
+
+AVG()
+
+Calculates average.
+
+---
+
+## JOIN Operations
+
+INNER JOIN
+
+Returns matching rows.
+
+LEFT JOIN
+
+Returns all left table rows.
+
+RIGHT JOIN
+
+Returns all right table rows.
+
+---
+
+# Testing with Postman
+
+Each API endpoint was tested successfully.
+
+## GET
+
+Verified all books returned.
+
+---
+
+## POST
+
+Verified new book insertion.
+
+---
+
+## PUT
+
+Verified updated book details.
+
+---
+
+## DELETE
+
+Verified record deletion.
+
+---
+
+Every request returned proper HTTP status codes.
+
+Examples
+
+200 OK
+
+201 Created
+
+404 Not Found
+
+---
+
+# Database Schema
+
+Generated using pgAdmin ERD Tool.
+
+Tables
+
+- Books
+- Authors
+
+Relationship
+
+```
+Books.author_id
+        │
+        │
+        ▼
+Authors.author_id
+```
+
+This relationship ensures database normalization.
+
+---
+
+# Project Structure
+
+```
+flask-sql-api/
+│
+├── app.py
+├── queries.sql
+├── requirements.txt
+├── README.md
+├── schema_diagram.png
+└── MyCollection.postman_collection.json
+```
+
+---
+
+# Files Description
+
+## app.py
+
+Contains
+
+- Flask Application
+- Database Connection
+- CRUD APIs
+- SQL Execution
+- JSON Responses
+
+---
+
+## queries.sql
+
+Contains
+
+20+ SQL queries
+
+including
+
+- CRUD
+- JOINS
+- Aggregate Functions
+- GROUP BY
+- ORDER BY
+
+---
+
+## requirements.txt
+
+Stores Python libraries.
+
+Example
+
+```
+Flask
+Flask-CORS
+psycopg2-binary
+SQLAlchemy
+```
+
+---
+
+## schema_diagram.png
+
+ER Diagram of Books and Authors tables.
+
+---
+
+## Postman Collection
+
+Contains
+
+- GET API
+- POST API
+- PUT API
+- DELETE API
+
+Ready for import into Postman.
+
+---
+
+# Learning Outcomes
+
+By completing this project, I learned:
+
+- PostgreSQL installation and configuration
+- SQL query writing
+- Database normalization
+- Foreign Key relationships
+- Flask REST API development
+- CRUD operations
+- PostgreSQL integration using psycopg2
+- API testing using Postman
+- JSON request and response handling
+- Project documentation
+- GitHub project organization
+
+---
+
+# Conclusion
+
+This project successfully demonstrates how to build a RESTful CRUD API using Flask and PostgreSQL. The application performs complete database operations, follows REST architecture, returns JSON responses, and was thoroughly tested using Postman. The project also includes SQL scripts, API documentation, and an ER diagram, making it a complete backend database application.
