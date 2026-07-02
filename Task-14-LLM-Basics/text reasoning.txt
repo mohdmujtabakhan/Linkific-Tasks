@@ -1,0 +1,19 @@
+Solve the following math problem step by step.
+
+Explain why Binary Search is more efficient than Linear Search.
+
+Calculate the average marks and show the calculation.
+
+Calculate profit or loss with explanation.
+
+Find the area of a rectangle and explain each step.
+
+Explain how Linear Regression predicts salary.
+
+Compare Decision Tree and Random Forest with reasoning.
+
+Explain why data preprocessing is important.
+
+Solve the logical puzzle step by step.
+
+Recommend the best algorithm for this dataset and explain why.
